@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:theme="@style/AlertDialog.AppCompat.Light" android:orientation="vertical" android:background="#fff7f7f7" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/ab__title_op" android:background="#ff000000" android:focusable="true" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <RelativeLayout android:id="@id/ab__btn_back_container" android:clickable="true" android:layout_width="50.0dip" android:layout_height="fill_parent">
+            <ImageButton android:id="@id/ab__btn_back" android:background="@drawable/backrow_auto_mirrored" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_centerVertical="true" android:layout_marginStart="5.0dip" />
+        </RelativeLayout>
+        <TextView android:textSize="14.0dip" android:textColor="#ffffffff" android:gravity="center_vertical" android:id="@id/ab__main_title_op" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/main_title" android:layout_toRightOf="@id/ab__btn_back_container" android:layout_toEndOf="@id/ab__btn_back_container" />
+        <ProgressBar android:id="@id/pb_loading_op" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginLeft="5.0dip" android:indeterminateDrawable="@drawable/ab_progress_loading" android:layout_toRightOf="@id/ab__main_title_op" android:layout_centerVertical="true" android:layout_marginStart="5.0dip" android:layout_toEndOf="@id/ab__main_title_op" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true">
+            <LinearLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <TextView android:textSize="14.0dip" android:textColor="@android:color/white" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/ab__btn_conversation_op" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="5.0dip" android:text="@string/goto_Elva" android:layout_marginEnd="5.0dip" />
+                <ImageView android:id="@id/iv_reddot_alert_op" android:background="@drawable/aihelp_reddot_alert" android:visibility="gone" android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_marginTop="10.0dip" />
+            </LinearLayout>
+            <ImageButton android:id="@id/ab__btn_faqlist" android:background="@drawable/chat_bot_head_faqlist" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="5.0dip" android:layout_marginEnd="5.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:id="@id/elva_appbar" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.material.tabs.TabLayout android:id="@id/elva_tabs" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" app:tabIndicatorColor="#ff26a8ee" app:tabMode="fixed" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.viewpager.widget.ViewPager android:id="@id/elva_viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</LinearLayout>

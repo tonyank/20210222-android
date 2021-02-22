@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="left" android:id="@id/myshare" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_width="fill_parent" android:layout_height="50.0dip" android:src="@drawable/bg" android:scaleType="centerCrop" />
+        <ImageView android:layout_gravity="left" android:id="@id/shareback" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginLeft="0.0dip" android:layout_marginTop="0.0dip" android:src="@drawable/back" />
+        <TextView android:textSize="20.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="150.0dip" android:layout_height="40.0dip" android:layout_marginTop="5.0dip" android:text="分享推广" android:textAlignment="center" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ProgressBar android:id="@id/pb_waiting" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="@android:style/Widget.DeviceDefault.ProgressBar" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/header_view" android:background="#fff8f8f8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="20.0dip" android:paddingEnd="20.0dip">
+        <RelativeLayout android:id="@id/container_per_app_proxy" android:layout_width="fill_parent" android:layout_height="@dimen/bypass_list_header_height">
+            <androidx.appcompat.widget.SwitchCompat android:id="@id/switch_per_app_proxy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            <androidx.appcompat.widget.AppCompatTextView android:textAppearance="@style/TextAppearance.AppCompat.Small" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_pref_per_app_proxy" android:layout_toLeftOf="@id/switch_per_app_proxy" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_toStartOf="@id/switch_per_app_proxy" android:layout_alignParentStart="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/container_bypass_apps" android:layout_width="fill_parent" android:layout_height="@dimen/bypass_list_header_height">
+            <androidx.appcompat.widget.SwitchCompat android:id="@id/switch_bypass_apps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            <androidx.appcompat.widget.AppCompatTextView android:textAppearance="@style/TextAppearance.AppCompat.Small" android:id="@id/tv_bypass_apps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/switch_bypass_apps_mode" android:layout_toLeftOf="@id/switch_bypass_apps" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_toStartOf="@id/switch_bypass_apps" android:layout_alignParentStart="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/bypass_list_header_height">
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatEditText android:textAppearance="@style/TextAppearance.AppCompat.Small" android:id="@id/et_search" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/msg_enter_keywords" android:maxLines="1" android:singleLine="true" android:inputType="text" android:imeOptions="actionSearch" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</RelativeLayout>

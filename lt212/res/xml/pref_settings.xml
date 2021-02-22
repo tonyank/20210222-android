@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/title_settings">
+        <CheckBoxPreference android:title="@string/title_pref_per_app_proxy" android:key="pref_per_app_proxy" android:summary="@string/summary_pref_per_app_proxy" />
+        <CheckBoxPreference android:title="@string/title_pref_speed_enabled" android:key="pref_speed_enabled" android:summary="@string/summary_pref_speed_enabled" />
+        <CheckBoxPreference android:title="@string/title_pref_sniffing_enabled" android:key="pref_sniffing_enabled" android:summary="@string/summary_pref_sniffing_enabled" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/title_pref_routing">
+        <ListPreference android:entries="@array/routing_domain_strategy" android:title="@string/title_pref_routing_domain_strategy" android:key="pref_routing_domain_strategy" android:summary="%s" android:defaultValue="IPIfNonMatch" android:entryValues="@array/routing_domain_strategy" />
+        <ListPreference android:entries="@array/routing_mode" android:title="@string/title_pref_routing_mode" android:key="pref_routing_mode" android:summary="%s" android:defaultValue="0" android:entryValues="@array/routing_mode_value" />
+        <Preference android:title="@string/title_pref_routing_custom" android:key="pref_routing_custom" android:summary="@string/title_pref_routing_custom" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/title_advanced">
+        <CheckBoxPreference android:title="@string/title_pref_forward_ipv6" android:key="pref_forward_ipv6" android:summary="@string/summary_pref_forward_ipv6" />
+        <CheckBoxPreference android:title="@string/title_pref_local_dns_enabled" android:key="pref_local_dns_enabled" android:summary="@string/summary_pref_local_dns_enabled" />
+        <EditTextPreference android:title="@string/title_pref_domestic_dns" android:key="pref_domestic_dns" android:summary="@string/summary_pref_domestic_dns" />
+        <EditTextPreference android:title="@string/title_pref_remote_dns" android:key="pref_remote_dns" android:summary="@string/summary_pref_remote_dns" />
+        <Preference android:title="@string/title_pref_socks_port" android:key="pref_socks_port" android:summary="10808" />
+        <Preference android:title="@string/title_pref_http_port" android:key="pref_http_port" android:summary="10809" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/title_about">
+        <Preference android:title="@string/title_pref_version" android:key="pref_version" />
+    </PreferenceCategory>
+</PreferenceScreen>

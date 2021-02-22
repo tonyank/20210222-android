@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/ab_btn_white_shape" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="end" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+            <ImageView android:id="@id/iv_reward_close" android:background="@drawable/aihelp_clear" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="10.0dip" android:layout_marginEnd="10.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+            <TextView android:textSize="14.0sp" android:textColor="#ff000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="5.0dip" android:text="@string/ab_reward_your_points" android:layout_marginStart="10.0dip" android:layout_marginEnd="5.0dip" />
+            <TextView android:textSize="14.0sp" android:textColor="#ff000000" android:id="@id/tv_reward_balance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+            <TextView android:textSize="14.0sp" android:textColor="#ff000000" android:id="@id/tv_reward_point" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="@string/ab_reward_points" android:layout_marginEnd="10.0dip" />
+            <TextView android:textSize="14.0sp" android:textColor="#ff000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="@string/ab_reward_go_to_the" android:layout_marginEnd="5.0dip" />
+            <TextView android:textSize="14.0sp" android:textColor="#ffff0000" android:id="@id/tv_reward_qa" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="@string/ab_reward_qa_community" android:layout_marginEnd="5.0dip" />
+            <TextView android:textSize="14.0sp" android:textColor="#ff000000" android:id="@id/tv_reward_action" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_marginEnd="10.0dip" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip">
+            <TextView android:textSize="14.0sp" android:textColor="#ffbfbfbf" android:gravity="center" android:id="@id/tv_reward_one" android:background="@drawable/ab_btn_gray_shape" android:layout_width="80.0dip" android:layout_height="30.0dip" android:layout_marginRight="10.0dip" android:text="0" android:layout_weight="1.0" android:layout_marginEnd="10.0dip" />
+            <TextView android:textSize="14.0sp" android:textColor="#ffbfbfbf" android:gravity="center" android:id="@id/tv_reward_two" android:background="@drawable/ab_btn_gray_shape" android:layout_width="80.0dip" android:layout_height="30.0dip" android:layout_marginLeft="10.0dip" android:text="0" android:layout_weight="1.0" android:layout_marginStart="10.0dip" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip">
+            <TextView android:textSize="14.0sp" android:textColor="#ffbfbfbf" android:gravity="center" android:id="@id/tv_reward_three" android:background="@drawable/ab_btn_gray_shape" android:layout_width="80.0dip" android:layout_height="30.0dip" android:layout_marginRight="10.0dip" android:text="0" android:layout_weight="1.0" android:layout_marginEnd="10.0dip" />
+            <TextView android:textSize="14.0sp" android:textColor="#ffbfbfbf" android:gravity="center" android:id="@id/tv_reward_four" android:background="@drawable/ab_btn_gray_shape" android:layout_width="80.0dip" android:layout_height="30.0dip" android:layout_marginLeft="10.0dip" android:text="0" android:layout_weight="1.0" android:layout_marginStart="10.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="10.0dip">
+            <ImageButton android:id="@id/ib_reward_ok" android:background="@drawable/evaluate_submit_gray" android:layout_width="100.0dip" android:layout_height="50.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
