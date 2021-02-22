@@ -192,12 +192,14 @@
 .end method
 
 .method public final getEnable()I
-    .locals 1
+    .locals 3
 
     .line 41
     iget v0, p0, Lcom/leiting/lt100/ui/LineItem;->enable:I
 
-    return v0
+    const/4 v0, 0x1
+
+	return v0
 .end method
 
 .method public final getEnable_desc()Ljava/lang/String;
