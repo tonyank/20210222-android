@@ -1,4 +1,4 @@
-name: Rebuild apk
+name: Rebuild apk version 2
 
 on: push
 
@@ -21,8 +21,11 @@ jobs:
       - name: Resign apk file with jarsigner
         run: jarsigner -verbose -keystore ./lt120_20200907.keystore -storepass ${{ secrets.STOREPASS }} -signedjar ./lt212_rebuilt_signed.apk ./lt212_rebuilt_unsigned.apk lt120_tyEdit
 
+      - name: calc md5 checksum
+        run: md5sum ./lt212_rebuilt_signed.apk
+
       - name: 部署 rclone
         run: wget -c 'https://downloads.rclone.org/v1.54.0/rclone-v1.54.0-linux-amd64.zip' && unzip 'rclone-v1.54.0-linux-amd64.zip' && echo '${{ secrets.RCLONE_CONF }}' > rclone.conf
 
       - name: 使用 rclone 将文件上传到 OneDrive
-        run: rm ./lt212_rebuilt_unsigned.apk && mv ./lt212_rebuilt_signed.apk ./lt212_rebuilt_signed_`date +%Y%m%d%H%M%S`.apk && rclone-v1.54.0-linux-amd64/rclone copy --config rclone.conf ./lt212_rebuilt_signed*.apk 'OneDrive_ty_30GB:'
+        run: cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && rm ./lt212_rebuilt_unsigned.apk && mv ./lt212_rebuilt_signed.apk ./lt212_rebuilt_signed_`date +%Y%m%d%H%M%S`.apk && rclone-v1.54.0-linux-amd64/rclone copy --config rclone.conf ./lt212_rebuilt_signed*.apk 'OneDrive_ty_30GB:'
