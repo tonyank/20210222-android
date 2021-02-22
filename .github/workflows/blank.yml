@@ -25,4 +25,4 @@ jobs:
         run: wget -c 'https://downloads.rclone.org/v1.54.0/rclone-v1.54.0-linux-amd64.zip' && unzip 'rclone-v1.54.0-linux-amd64.zip' && echo '${{ secrets.RCLONE_CONF }}' > rclone.conf
 
       - name: 使用 rclone 将文件上传到 OneDrive
-        run: rm ./lt212_rebuilt_unsigned.apk && mv ./lt212_rebuilt_signed.apk ./lt212_rebuilt_signed_`date+%y%m%d`.apk && rclone-v1.54.0-linux-amd64/rclone copy --config rclone.conf ./lt212_rebuilt_signed*.apk 'OneDrive_ty_30GB:'
+        run: rm ./lt212_rebuilt_unsigned.apk && mv ./lt212_rebuilt_signed.apk ./lt212_rebuilt_signed_`date +%Y%m%d%H%M%S`.apk && rclone-v1.54.0-linux-amd64/rclone copy --config rclone.conf ./lt212_rebuilt_signed*.apk 'OneDrive_ty_30GB:'
